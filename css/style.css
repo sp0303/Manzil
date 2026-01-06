@@ -22,6 +22,13 @@ body {
 }
 
 /* ---------- Preloader Animation ---------- */
+/* ---------- Scroll Lock During Preloader ---------- */
+body.preloader-active {
+  overflow: hidden;
+  height: 100vh;
+  touch-action: none; /* mobile scroll lock */
+}
+
 #preloader {
   position: fixed;
   top: 0; left: 0;

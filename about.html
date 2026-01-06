@@ -120,26 +120,7 @@
 
 <body>
   <!-- NAVBAR (unchanged) -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html" aria-label="Manzil Homes Home">
-        <img src="./pngs/SecondaryLogoWhite.png" alt="Manzil Homes" height="50" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
-          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-          <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
-          <li class="nav-item"><a href="studio.html" class="nav-link">Design Studio</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id ="navbar"></div>
 
   <!-- HERO -->
   <section class="about-hero">
@@ -363,6 +344,14 @@
   <footer class="text-center text-white py-4 bg-dark">
     <p class="mb-0">&copy; 2025 Manzil Homes. All rights reserved.</p>
   </footer>
+  <script>
+    // Load Navbar component
+    fetch('/components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar').innerHTML = data;
+      });
+  </script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
