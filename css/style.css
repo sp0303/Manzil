@@ -1,0 +1,291 @@
+/* =========================================
+   MANZIL HOMES - LUXURY INTERIORS WEBSITE
+   Author: ChatGPT | 2025
+   ========================================= */
+
+/* ---------- Global Styles ---------- */
+:root {
+  --primary-color: #bfa37a;        /* Champagne Gold */
+  --secondary-color: #2b2b2b;      /* Deep Charcoal */
+  --accent-color: #d4c19c;         /* Soft Gold */
+  --bg-dark: #121212;
+  --text-light: #f8f8f8;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Raleway', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #fff;
+  color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+/* ---------- Preloader Animation ---------- */
+#preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 2s ease, visibility 2s ease;
+}
+
+.loader-content { text-align: center; animation: fadeIn 1.5s ease-in-out; }
+
+.loader-logo {
+  width: 350px;
+  opacity: 0;
+  animation: logoFade 3s ease forwards,rotateOnce 3s ease forwards, shimmer 4s infinite linear;
+}
+
+.loader-text {
+  margin-top: 20px;
+  color: #bfa37a;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: textFade 3s ease 1.5s forwards;
+}
+
+@keyframes logoFade {
+  0% { transform: scale(0.8) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1.05) rotate(10deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+@keyframes rotateOnce {
+  0% { transform: rotate(0deg) scale(0.8); }
+  50% { transform: rotate(360deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+@keyframes textFade { 0% { transform: translateY(20px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Gold shimmer effect */
+@keyframes shimmer {
+  0% { filter: brightness(1) contrast(1); }
+  50% { filter: brightness(1.3) contrast(1.05); } /* reduced glow */
+  100% { filter: brightness(1) contrast(1); }
+}
+
+
+/* Hide preloader smoothly */
+body.loaded #preloader {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease, visibility 2s ease;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+}
+
+a { text-decoration: none; transition: all 0.3s ease; }
+a:hover { color: var(--primary-color); }
+
+/* ---------- Navbar (UNCHANGED LOOK, with mobile fixes) ---------- */
+.navbar {
+  background: transparent;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar.scrolled {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-brand img {
+  height: 55px;
+  transition: transform 0.3s ease;
+}
+.navbar-brand img:hover { transform: scale(1.05); }
+
+.nav-link {
+  color: #fff; /* White links on transparent navbar */
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+.navbar.scrolled .nav-link { color: var(--secondary-color) !important; }
+.nav-link:hover, .nav-link.active { color: var(--primary-color); }
+
+/* MOBILE VISIBILITY FIXES */
+.navbar .navbar-toggler { border-color: rgba(255,255,255,0.5); }
+.navbar .navbar-toggler:focus { box-shadow: none; }
+
+/* white hamburger at top on transparent */
+.navbar .navbar-toggler-icon {
+  background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/* dark hamburger after scroll (white bg) */
+.navbar.scrolled .navbar-toggler { border-color: rgba(0,0,0,0.25); }
+.navbar.scrolled .navbar-toggler-icon {
+  background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0,0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* when mobile menu is open, show white panel + dark links */
+@media (max-width: 991.98px) {
+  .navbar .collapse.show {
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+  }
+  .navbar .collapse.show .nav-link {
+    color: var(--secondary-color) !important;
+  }
+  .navbar .collapse.show .nav-link:hover,
+  .navbar .collapse.show .nav-link.active {
+    color: var(--primary-color) !important;
+  }
+}
+
+/* ---------- Hero Section (Home) ---------- */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(60%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(18, 18, 18, 0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  animation: fadeInUp 1.5s ease-in-out 0.3s both;
+}
+
+.hero-logo { width: 200px; max-width: 80%; }
+
+.hero-section h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.hero-section p { font-size: 1.1rem; margin-bottom: 2rem; }
+
+.btn-light {
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+.btn-light:hover { background-color: var(--accent-color); transform: translateY(-3px); }
+
+/* ---------- Shared spacing helpers ---------- */
+.section-padding { padding: 80px 0; }
+
+/* ---------- Sections ---------- */
+.about-preview { background: #fff; text-align: center; }
+.about-preview h2 { color: var(--secondary-color); }
+
+.services .col-md-3 img {
+  filter: grayscale(40%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.services .col-md-3:hover img { filter: none; transform: scale(1.1); }
+
+.projects-preview img { transition: transform 0.4s ease; }
+.projects-preview img:hover { transform: scale(1.05); }
+
+/* ---------- Contact Page ---------- */
+.contact-hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: url('../images/contact-hero.jpg') center/cover no-repeat; /* update path if needed */
+}
+
+.contact-form .form-control {
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.contact-form .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(191,163,122,0.15);
+}
+.contact-form .btn.btn-light {
+  border-radius: 14px;
+  padding: 0.9rem 1.1rem;
+  letter-spacing: 0.6px;
+}
+
+/* ---------- CEO image inside ratio: always show ---------- */
+.ratio img,
+.ratio > img,
+.ratio .img,
+.ratio .img-fluid {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  /* fallback background while loading */
+  background: #eaeaea;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- Scroll Animations ---------- */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px) {
+  .section-padding { padding: 64px 0; }
+  .contact-hero { min-height: 56vh; }
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 { font-size: 2.2rem; }
+  .hero-logo { width: 150px; }
+  .btn-light { font-size: 0.9rem; padding: 10px 25px; }
+
+  /* remove global mobile override that made top links dark over dark hero */
+  /* keep link colors driven by state (.scrolled or .collapse.show) */
+  /* (no .nav-link color override here) */
+
+  .section-padding { padding: 56px 0; }
+}

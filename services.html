@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Services | Manzil Homes — Ultra-Luxury Interiors, Construction & Commercial Design</title>
+  <meta name="description" content="Manzil Homes delivers ultra-luxury interiors, construction, renovations, modular setups, theme & artistic concepts, and premium commercial design for offices, cafés, and showrooms. Transparent, Vastu-aligned, on-time." />
+  <link rel="canonical" href="https://www.example.com/services.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Manzil Homes Services — Ultra-Luxury Design & Build" />
+  <meta property="og:description" content="Interiors, construction, renovations, modular, theme/artistic concepts, commercial spaces—delivered transparently and on time." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.example.com/services.html" />
+  <meta property="og:image" content="./pngs/LogoWhite.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Manzil Homes Services — Ultra-Luxury Design & Build" />
+  <meta name="twitter:description" content="Interiors, construction, renovations, modular, theme/artistic concepts, commercial spaces—delivered transparently and on time." />
+  <meta name="twitter:image" content="./pngs/LogoWhite.png" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Animate.css (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./pngs/SecondaryLogoBlack.png" type="image/png" />
+
+  <style>
+    /* Page-specific polish (keeps your main CSS intact) */
+    .services-hero{
+      background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35) 40%, rgba(0,0,0,.55)),
+                  url('./images/services-hero.jpg') center/cover no-repeat;
+      min-height: 70vh; color:#fff;
+    }
+    .service-card{
+      padding: 28px; background:#fff; border-radius: 18px;
+      box-shadow: 0 8px 22px rgba(0,0,0,.06); height:100%;
+      text-align:left;
+    }
+    .service-card .icon{
+      width:44px; height:44px; display:inline-flex; align-items:center; justify-content:center;
+      border-radius:12px; background:#f6f2ea; color:#bfa37a; flex:none;
+    }
+    .service-card h5{ margin:12px 0 6px; }
+    .service-card p{ margin:0; color:#6b6b6b; }
+    .bullets li{ margin-bottom:.4rem; }
+    .feature-chip{
+      display:inline-block; padding:.45rem .8rem; border-radius:999px; font-size:.85rem;
+      border:1px solid #e8e2d6; background:#fbf9f5; color:#7a6a49; margin:.25rem;
+    }
+    .package-card{
+      border-radius:18px; background:#121212; color:#fff; padding:28px;
+    }
+  </style>
+
+  <!-- JSON-LD: Services summary -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Manzil Homes",
+    "url":"https://www.example.com/",
+    "image":"https://www.example.com/pngs/LogoWhite.png",
+    "description":"Ultra-luxury interiors and construction studio delivering Vastu-aligned homes and premium commercial spaces.",
+    "areaServed":[ "Andhra Pradesh", "Telangana" ],
+    "makesOffer":[
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Luxury Residential Interiors"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Architecture & Construction"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Renovation & Remodeling"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Modular Kitchens & Wardrobes"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Theme-Based & Artistic Concepts"}},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Commercial Design: Offices, Cafés, Showrooms"}}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Manzil Homes Home">
+        <img src="./pngs/SecondaryLogoWhite.png" alt="Manzil Homes" height="50" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link active" aria-current="page">Services</a></li>
+          <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="studio.html" class="nav-link">Design Studio</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-section services-hero d-flex align-items-center text-center">
+    <div class="overlay"></div>
+    <div class="hero-content container">
+      <h1 class="display-5 fw-bold mb-2">Ultra-Luxury Services</h1>
+      <p class="mb-0">A decade of expertise crafting theme-based, Vastu-aligned homes and premium commercial spaces—end-to-end.</p>
+      <div class="mt-3">
+        <span class="feature-chip">Women-Led</span>
+        <span class="feature-chip">Vastu-Aligned</span>
+        <span class="feature-chip">Transparent & On-Time</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">What We Do</h2>
+        <p class="text-muted">From concept to construction—ultra-modern luxury with an Indian soul.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Interiors -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18v2H3zm2 4h14v10H5z"/></svg>
+              </span>
+              <div>
+                <h5 class="fw-bold mb-0">Residential Interiors</h5>
+                <small class="text-muted">Apartments, villas, penthouses</small>
+              </div>
+            </div>
+            <p class="mt-3">Layered lighting, bespoke furniture, premium finishes, and calm, liveable luxury—planned around your rituals and Vastu.</p>
+            <ul class="bullets small mt-2">
+              <li>Concept & mood, 3D visuals, material boards</li>
+              <li>Detail drawings: joinery, lighting, electrical</li>
+              <li>End-to-end build & site governance</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Construction -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M3 13h2v6H3zm4-4h2v10H7zm4 3h2v7h-2zm4-6h2v13h-2zm4 8h2v5h-2z"/></svg>
+              </span>
+              <div>
+                <h5 class="fw-bold mb-0">Architecture & Construction</h5>
+                <small class="text-muted">Structure to finish</small>
+              </div>
+            </div>
+            <p class="mt-3">Engineering-first delivery with premium detailing. Schedules we commit to—and meet.</p>
+            <ul class="bullets small mt-2">
+              <li>Planning, approvals & Vastu alignment</li>
+              <li>Bill of quantities (BOQ) & transparent tracking</li>
+              <li>Quality control, site safety & handover</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Renovations -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m21 7l-9 10L3 8l1.5-1.5L12 13l7.5-8z"/></svg>
+              </span>
+              <div>
+                <h5 class="fw-bold mb-0">Renovation & Remodeling</h5>
+                <small class="text-muted">Make it modern. Make it Manzil.</small>
+              </div>
+            </div>
+            <p class="mt-3">Transform under-used spaces into refined experiences—better layouts, light, and materiality.</p>
+            <ul class="bullets small mt-2">
+              <li>Space re-planning & structural checks</li>
+              <li>Services upgrade (electrical, HVAC, plumbing)</li>
+              <li>Fast-track execution with protection protocols</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Modular -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/></svg>
+              </span>
+              <div>
+                <h5 class="fw-bold mb-0">Modular Kitchens & Wardrobes</h5>
+                <small class="text-muted">Premium hardware & finishes</small>
+              </div>
+            </div>
+            <p class="mt-3">European hardware, intelligent storage, stain-resistant finishes—engineered for daily Indian use.</p>
+            <ul class="bullets small mt-2">
+              <li>Custom carcass & shutter options</li>
+              <li>Soft-close systems, organizers, lighting</li>
+              <li>Hassle-free install & warranty</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Theme-based -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="m3 17l6-6l4 4l8-8v10H3z"/></svg>
+              </span>
+              <div>
+                <h5 class="fw-bold mb-0">Theme-Based Concepts</h5>
+                <small class="text-muted">Narrative-driven design</small>
+              </div>
+            </div>
+            <p class="mt-3">From serene Japandi to regal contemporary—spaces that tell your story with restraint and art.</p>
+            <ul class="bullets small mt-2">
+              <li>Mood boards, palette & textures</li>
+              <li>Curated art & accessories</li>
+              <li>Signature lighting compositions</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Artistic-based -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M3 17v-2l10-5l8 4v2l-8-4zM3 9V7l10-5l8 4v2l-8-4z"/></svg>
+              </span>
+              <div>
+                <h5 class="fw-bold mb-0">Artistic Direction</h5>
+                <small class="text-muted">Statement walls & installations</small>
+              </div>
+            </div>
+            <p class="mt-3">Custom finishes, textured walls, stone inlays, metalwork—gallery-grade finesse for daily living.</p>
+            <ul class="bullets small mt-2">
+              <li>Material experimentation & samples</li>
+              <li>Collaboration with artisans</li>
+              <li>On-site mock-ups & approvals</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Commercials -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M4 4h16v4H4zm0 6h16v10H4z"/></svg>
+              </span>
+              <div>
+                <h5 class="fw-bold mb-0">Commercial Design</h5>
+                <small class="text-muted">Retail & hospitality</small>
+              </div>
+            </div>
+            <p class="mt-3">Spaces that convert—considered circulation, branding touchpoints, durable luxury finishes.</p>
+            <ul class="bullets small mt-2">
+              <li>Brand language & wayfinding</li>
+              <li>Lighting for product & mood</li>
+              <li>Durability without losing luxe</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Offices -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M3 3h18v6H3zm0 8h8v10H3zm10 0h8v10h-8z"/></svg>
+              </span>
+              <div>
+                <h5 class="fw-bold mb-0">Workplaces & Offices</h5>
+                <small class="text-muted">Productivity with presence</small>
+              </div>
+            </div>
+            <p class="mt-3">Day-light planning, acoustics, ergonomic systems, executive suites with brand identity.</p>
+            <ul class="bullets small mt-2">
+              <li>Open office & neighborhood planning</li>
+              <li>Boardrooms, cafés, phone booths</li>
+              <li>Tech integration & cable governance</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Cafés & Showrooms -->
+        <div class="col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon">
+                <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M5 3h14l2 6H3zM4 11h16v8H4z"/></svg>
+              </span>
+              <div>
+                <h5 class="fw-bold mb-0">Cafés & Showrooms</h5>
+                <small class="text-muted">Experience-first environments</small>
+              </div>
+            </div>
+            <p class="mt-3">Signature seating, merchandising logic, lighting that flatters both product and people.</p>
+            <ul class="bullets small mt-2">
+              <li>Service & back-of-house planning</li>
+              <li>Brand storytelling through materials</li>
+              <li>Compliance & safety standards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature chips -->
+      <div class="text-center mt-4">
+        <span class="feature-chip">3D Visualization</span>
+        <span class="feature-chip">Detail Drawings</span>
+        <span class="feature-chip">Premium Vendor Network</span>
+        <span class="feature-chip">After-Handover Support</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED / DIFFERENTIATORS -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-7">
+          <div class="package-card h-100">
+            <h3 class="fw-bold">What’s Included</h3>
+            <p class="text-light-50 mb-3">Ultra-modern luxury, delivered transparently.</p>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <svg width="22" height="22" viewBox="0 0 24 24"><path fill="#bfa37a" d="m21 7l-9 10L3 8l1.5-1.5L12 13l7.5-8z"/></svg>
+                  <div>
+                    <strong>Vastu-Aligned Planning</strong>
+                    <div class="small opacity-75">Balanced, intentional spatial flow.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <svg width="22" height="22" viewBox="0 0 24 24"><path fill="#bfa37a" d="M12 2l7 3v6c0 5-3.8 9.7-7 11c-3.2-1.3-7-6-7-11V5l7-3Z"/></svg>
+                  <div>
+                    <strong>Transparent BOQs</strong>
+                    <div class="small opacity-75">Luxury at true rates. No hidden costs.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <svg width="22" height="22" viewBox="0 0 24 24"><path fill="#bfa37a" d="M12 20a8 8 0 1 0-8-8a8 8 0 0 0 8 8Zm1-12v4l3 1"/></svg>
+                  <div>
+                    <strong>100% On-Time</strong>
+                    <div class="small opacity-75">Milestone-based execution discipline.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-start gap-2">
+                  <svg width="22" height="22" viewBox="0 0 24 24"><path fill="#bfa37a" d="M3 3h18v2H3zm2 4h14v2H5z"/></svg>
+                  <div>
+                    <strong>Detail Drawings</strong>
+                    <div class="small opacity-75">Joinery, MEP, lighting layers, elevations.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="contact.html" class="btn btn-light rounded-pill px-4 mt-3">Book a Consultation</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="p-4 bg-white rounded-4 h-100 shadow-sm">
+            <h4 class="fw-bold">How We Work</h4>
+            <ol class="small mt-2 mb-3">
+              <li>Discovery & Brief — lifestyle mapping, budget, Vastu inputs</li>
+              <li>Concept & 3D — mood, materials, renders</li>
+              <li>Detailing — drawings, specs, BOQs</li>
+              <li>Build — site execution, QA, handover</li>
+            </ol>
+            <div class="small text-muted">
+              Service across Andhra Pradesh & Telangana. After-handover support included.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-padding">
+    <div class="container text-center">
+      <h2 class="fw-bold">Ready to Start?</h2>
+      <p class="text-muted mb-4">Tell us your city, timeline, and style—our team will prepare a tailored plan.</p>
+      <a href="contact.html" class="btn btn-light rounded-pill px-4">Start Your Project</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center text-white py-4 bg-dark">
+    <p class="mb-0">&copy; 2025 Manzil Homes. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
