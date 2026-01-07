@@ -265,6 +265,25 @@ a:hover { color: var(--primary-color); }
   background: #eaeaea;
 }
 
+/* Equal-height project cards */
+.project-card {
+  height: 100%;
+}
+
+.project-img {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* change to 16/9 if needed */
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* key line */
+  display: block;
+}
+
 /* ---------- Footer ---------- */
 footer {
   background-color: var(--bg-dark);
@@ -296,3 +315,56 @@ footer {
 
   .section-padding { padding: 56px 0; }
 }
+
+/* ---------- Services Hero Carousel ---------- */
+.services-hero {
+  min-height: 70vh;
+}
+
+.services-hero .carousel,
+.services-hero .carousel-inner,
+.services-hero .carousel-item,
+.services-hero img {
+  height: 100%;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* ---------- Footer Links ---------- */
+.footer-link {
+  color: #bdbdbd;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #bfa37a; /* your gold */
+}
+
+/* Footer text visibility fix */
+footer p,
+footer li,
+footer small {
+  color: #d1d1d1;
+}
+
+footer .text-muted {
+  color: #d1d1d1 !important;
+}
+
+footer h6 {
+  color: #ffffff;
+}
+
+footer a {
+  color: #d1d1d1;
+}
+
+footer a:hover {
+  color: #bfa37a; /* gold accent */
+}
+

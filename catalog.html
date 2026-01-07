@@ -139,10 +139,7 @@
 </div>
 
 <!-- FOOTER -->
-<footer class="text-center text-white py-4 bg-dark">
-  <p class="mb-0">&copy; 2025 Manzil Homes. All rights reserved.</p>
-</footer>
-
+<div id="footer"></div>
 <!-- Bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -152,7 +149,14 @@
     .then(res => res.text())
     .then(html => document.getElementById('navbar').innerHTML = html);
 </script>
-
+<script>
+  // Load Footer component
+  fetch('./components/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
 <!-- PAGE LOGIC -->
 <script>
   function showBrands() {

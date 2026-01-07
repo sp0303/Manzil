@@ -37,26 +37,41 @@
   </section>
 
   <!-- GALLERY -->
-  <section class="projects-gallery section-padding">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <img src="assets/project1.jpg" class="img-fluid rounded shadow" alt="Project 1" />
+  <section class="projects-preview py-5 text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-5">Signature Projects</h2>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="project-card h-100">
+          <div class="project-img">
+            <img src="images/project1.jpg" alt="Luxury Villa">
+          </div>
         </div>
-        <div class="col-md-4">
-          <img src="assets/project2.jpg" class="img-fluid rounded shadow" alt="Project 2" />
+      </div>
+
+      <div class="col-md-4">
+        <div class="project-card h-100">
+          <div class="project-img">
+            <img src="images/project2.jpg" alt="Modern Apartment">
+          </div>
         </div>
-        <div class="col-md-4">
-          <img src="assets/project3.jpg" class="img-fluid rounded shadow" alt="Project 3" />
+      </div>
+
+      <div class="col-md-4">
+        <div class="project-card h-100">
+          <div class="project-img">
+            <img src="images/project3.jpg" alt="Office Interiors">
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- FOOTER -->
-  <footer class="text-center text-white py-4 bg-dark">
-    <p class="mb-0">&copy; 2025 Manzil Homes. All rights reserved.</p>
-  </footer>
+<div id="footer"></div >
   <script>
     // Load Navbar component
     fetch('./components/navbar.html')
@@ -64,6 +79,14 @@
       .then(data => {
         document.getElementById('navbar').innerHTML = data;
       });
+  </script>
+  <script>
+    // Load Footer component
+    fetch('./components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      }); 
   </script>
 
   <!-- Bootstrap JS -->
