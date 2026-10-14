@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+Sitemap: https://manzils.in/sitemap.xml
