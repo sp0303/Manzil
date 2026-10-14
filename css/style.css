@@ -217,8 +217,19 @@ a:hover { color: var(--primary-color); }
 }
 .btn-light:hover { 
   background-color: var(--primary-color); 
+  color: #fff;
   transform: translateY(-3px); 
   box-shadow: 0 4px 15px rgba(26, 43, 195, 0.2);
+}
+/* Keep text white when tapped/focused/disabled (Bootstrap defaults it to dark) */
+.btn-light:focus,
+.btn-light:focus-visible,
+.btn-light:active,
+.btn-light.active,
+.btn-light:disabled {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #fff !important;
 }
 
 /* ---------- Shared spacing helpers ---------- */
