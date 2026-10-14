@@ -1,48 +1,56 @@
-
-// ---------- Preloader (5 seconds) ----------
-window.addEventListener("DOMContentLoaded", () => {
-  const preloader = document.getElementById("preloader");
-  const nav = document.querySelector(".navbar");
-  const logo = document.querySelector(".navbar-brand img");
-
-  // Helper to sync navbar state with current scroll position
-  const syncNav = () => {
-    if (!nav || !logo) return;
-    const scrolled = window.scrollY > 50;
-    nav.classList.toggle("scrolled", scrolled);
-    logo.src = scrolled ? "./pngs/SecondaryLogoBlack.png" : "./pngs/SecondaryLogoWhite.png";
-  };
-
-  if (preloader) {
-    // Keep the preloader visible for a full 5 seconds
-    setTimeout(() => {
-      document.body.classList.add("loaded");
-      preloader.style.display = "none";
-      // After showing the page, sync navbar once (in case user has already scrolled)
-      syncNav();
-    }, 5000);
-  } else {
-    // No preloader present — just sync immediately
-    syncNav();
-  }
-
-  // Also sync once right away in case there's no preloader delay
-  // (harmless if preloader exists; we'll sync again after it hides)
-  syncNav();
-});
-
-// ---------- Navbar scroll behavior ----------
-window.addEventListener("scroll", () => {
+// ---------- Navbar helpers ----------
+// The navbar is injected via fetch() on each page, so these run once it appears.
+const syncNav = () => {
   const nav = document.querySelector(".navbar");
   const logo = document.querySelector(".navbar-brand img");
   if (!nav || !logo) return;
-
   const scrolled = window.scrollY > 50;
   nav.classList.toggle("scrolled", scrolled);
-
   // Swap logo for contrast
   logo.src = scrolled ? "./pngs/SecondaryLogoBlack.png" : "./pngs/SecondaryLogoWhite.png";
-}, { passive: true });
+};
+
+// Highlight the menu item for the current page
+const markActiveNav = () => {
+  const current = location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".navbar .nav-link").forEach((link) => {
+    const isActive = link.getAttribute("href") === current;
+    link.classList.toggle("active", isActive);
+    if (isActive) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  });
+};
+
+const navbarHost = document.getElementById("navbar");
+if (navbarHost) {
+  const onNavbarReady = () => { markActiveNav(); syncNav(); };
+  if (navbarHost.querySelector(".navbar")) onNavbarReady();
+  new MutationObserver(onNavbarReady).observe(navbarHost, { childList: true });
+}
+
+window.addEventListener("scroll", syncNav, { passive: true });
+
+// ---------- Preloader (home page only) ----------
+// Hide shortly after the page has loaded, and never keep visitors waiting more than ~3s.
+(() => {
+  const preloader = document.getElementById("preloader");
+  if (!preloader) return;
+
+  document.body.classList.add("preloader-active");
+  let done = false;
+  const hide = () => {
+    if (done) return;
+    done = true;
+    document.body.classList.add("loaded");               // triggers CSS fade-out
+    document.body.classList.remove("preloader-active");  // re-enable scroll
+    setTimeout(() => { preloader.style.display = "none"; }, 800);
+    syncNav();
+  };
+
+  if (document.readyState === "complete") setTimeout(hide, 600);
+  else window.addEventListener("load", () => setTimeout(hide, 600));
+  setTimeout(hide, 3000);
+})();
 
 // ---------- Video resilience (pause on reduced motion) ----------
 (() => {
