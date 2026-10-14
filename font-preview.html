@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Font Options | Manzil Homes</title>
+  <link rel="icon" href="./pngs/SecondaryLogoBlack.png" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600&family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@300;400;500&family=Jost:wght@300;400;500&family=Lato:wght@300;400;700&family=Marcellus&family=Montserrat:wght@300;400;600;700&family=Outfit:wght@300;400;600&family=Playfair+Display:wght@500;600&family=Raleway:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #1a2bc3;
+      --navy: #0f1335;
+      --soft: #97b4de;
+      --carbon: #2a2829;
+      --ice: #eaeff5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--ice);
+      color: var(--carbon);
+      line-height: 1.6;
+    }
+
+    /* Intro + jump bar */
+    .intro {
+      background: var(--navy);
+      color: var(--ice);
+      padding: 48px 16px 32px;
+      text-align: center;
+    }
+    .intro img { width: min(360px, 90vw); aspect-ratio: 3.6; object-fit: cover; margin-bottom: 12px; }
+    .intro h1 { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 2rem; margin-bottom: 8px; }
+    .intro p { max-width: 640px; margin: 0 auto; color: var(--soft); }
+
+    .jump {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(15, 19, 53, 0.95);
+      backdrop-filter: blur(6px);
+      display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;
+      padding: 12px 16px;
+    }
+    .jump a {
+      color: var(--ice); text-decoration: none; font-size: 0.85rem;
+      border: 1px solid rgba(151, 180, 222, 0.5); border-radius: 999px;
+      padding: 6px 14px;
+    }
+    .jump a:hover { background: var(--primary); border-color: var(--primary); }
+
+    /* Option block */
+    .option { max-width: 1100px; margin: 48px auto; padding: 0 16px; scroll-margin-top: 70px; }
+
+    .label {
+      display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .label .tag {
+      background: var(--primary); color: #fff; font-weight: 500;
+      border-radius: 6px; padding: 2px 10px; font-size: 0.9rem;
+    }
+    .label .name { font-weight: 500; font-size: 1.05rem; color: var(--navy); }
+    .label .why { color: #5a5f73; font-size: 0.9rem; flex-basis: 100%; }
+
+    .frame {
+      border-radius: 16px; overflow: hidden; background: #fff;
+      box-shadow: 0 10px 30px rgba(15, 19, 53, 0.12);
+    }
+
+    .hero {
+      position: relative; color: #fff; text-align: center;
+      padding: 90px 24px;
+      background: url('./images/interior.jpg') center / cover no-repeat;
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(rgba(15, 19, 53, 0.65), rgba(15, 19, 53, 0.75));
+    }
+    .hero > * { position: relative; }
+    .hero .eyebrow { letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.75rem; color: var(--soft); margin-bottom: 14px; }
+    .hero h2 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.15; margin-bottom: 16px; }
+    .hero p { font-size: 1.05rem; color: var(--ice); margin-bottom: 28px; }
+    .btn {
+      display: inline-block; background: #fff; color: var(--navy);
+      border-radius: 999px; padding: 12px 28px; text-decoration: none; font-weight: 500;
+    }
+
+    .content { padding: 48px 24px; text-align: center; }
+    .content h3 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); color: var(--navy); margin-bottom: 12px; }
+    .content > p { max-width: 680px; margin: 0 auto 32px; color: #555; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; text-align: left; }
+    .card { background: var(--ice); border-radius: 12px; padding: 20px; }
+    .card h4 { font-size: 1.2rem; color: var(--navy); margin-bottom: 6px; }
+    .card p { font-size: 0.92rem; color: #555; }
+
+    /* Font pairings: headings / body */
+    #a .h { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+    #a .b { font-family: 'Montserrat', sans-serif; font-weight: 300; }
+
+    #b .h { font-family: 'Playfair Display', serif; font-weight: 500; }
+    #b .b { font-family: 'Lato', sans-serif; font-weight: 300; }
+
+    #c .h { font-family: 'Marcellus', serif; font-weight: 400; }
+    #c .b { font-family: 'Jost', sans-serif; font-weight: 300; }
+
+    #d .h { font-family: 'Bodoni Moda', serif; font-weight: 400; }
+    #d .b { font-family: 'Raleway', sans-serif; font-weight: 300; }
+
+    #e .h { font-family: 'Outfit', sans-serif; font-weight: 600; }
+    #e .b { font-family: 'Outfit', sans-serif; font-weight: 300; }
+
+    #f .h { font-family: 'Montserrat', sans-serif; font-weight: 700; }
+    #f .b { font-family: 'Montserrat', sans-serif; font-weight: 300; }
+
+    footer { text-align: center; padding: 32px 16px 48px; color: #5a5f73; font-size: 0.9rem; }
+  </style>
+</head>
+
+<body>
+
+  <section class="intro">
+    <img src="./pngs/LogoWhite.png" alt="Manzil Homes" />
+    <h1>Font Options for Manzil Homes</h1>
+    <p>Each option below shows the same section of the website in a different font pairing: one font for
+      headings, one for body text. Please pick the option you like best (A to F).</p>
+  </section>
+
+  <nav class="jump">
+    <a href="#a">A · Cormorant</a>
+    <a href="#b">B · Playfair</a>
+    <a href="#c">C · Marcellus</a>
+    <a href="#d">D · Bodoni</a>
+    <a href="#e">E · Outfit</a>
+    <a href="#f">F · Current</a>
+  </nav>
+
+  <!-- Each option repeats the same mock content -->
+  <template id="mock">
+    <div class="frame">
+      <div class="hero">
+        <div class="eyebrow b">Interiors &amp; Construction</div>
+        <h2 class="h">Where Luxury Meets Design</h2>
+        <p class="b">Exclusive Interior &amp; Construction Solutions for Andhra &amp; Telangana</p>
+        <a class="btn b" href="#">Book Consultation</a>
+      </div>
+      <div class="content">
+        <h3 class="h">About Manzil Homes</h3>
+        <p class="b">A women-led design and construction studio crafting elegant spaces across Andhra Pradesh &amp;
+          Telangana. We transform homes into artistic expressions of luxury and comfort.</p>
+        <div class="cards">
+          <div class="card">
+            <h4 class="h">Luxury Interiors</h4>
+            <p class="b">From villas to apartments, we create timeless interiors for every lifestyle.</p>
+          </div>
+          <div class="card">
+            <h4 class="h">Architecture</h4>
+            <p class="b">Modern, sustainable, and aesthetic architecture tailored to your vision.</p>
+          </div>
+          <div class="card">
+            <h4 class="h">Construction</h4>
+            <p class="b">Precision-driven construction ensuring both beauty and durability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <section class="option" id="a">
+    <div class="label"><span class="tag">A</span><span class="name">Cormorant Garamond + Montserrat</span>
+      <span class="why">Recommended. Elegant, high-end serif headings with the clean body font you already use. The
+        classic look for luxury interior studios.</span></div>
+  </section>
+
+  <section class="option" id="b">
+    <div class="label"><span class="tag">B</span><span class="name">Playfair Display + Lato</span>
+      <span class="why">Bold, magazine-style headings. Feels premium and stands out strongly on large hero
+        images.</span></div>
+  </section>
+
+  <section class="option" id="c">
+    <div class="label"><span class="tag">C</span><span class="name">Marcellus + Jost</span>
+      <span class="why">Inspired by classical stone lettering. Calm and architectural, a good fit for a business that
+        does both design and construction.</span></div>
+  </section>
+
+  <section class="option" id="d">
+    <div class="label"><span class="tag">D</span><span class="name">Bodoni Moda + Raleway</span>
+      <span class="why">High-fashion, ultra-luxury feel, similar to Vogue-style branding. The most dramatic
+        option.</span></div>
+  </section>
+
+  <section class="option" id="e">
+    <div class="label"><span class="tag">E</span><span class="name">Outfit</span>
+      <span class="why">Modern and friendly. This is the font used in the brand kit (colour palette), so it matches
+        the existing brand design exactly.</span></div>
+  </section>
+
+  <section class="option" id="f">
+    <div class="label"><span class="tag">F</span><span class="name">Montserrat (current website font)</span>
+      <span class="why">What the website uses today, shown here for comparison.</span></div>
+  </section>
+
+  <footer>Manzil Homes · Font preview for review</footer>
+
+  <script>
+    const tpl = document.getElementById('mock');
+    document.querySelectorAll('.option').forEach(sec => sec.appendChild(tpl.content.cloneNode(true)));
+  </script>
+</body>
+
+</html>

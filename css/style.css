@@ -10,8 +10,9 @@
   --accent-color: #97b4de;         /* Soft Blue */
   --bg-dark: #2a2829;              /* Carbon Grey */
   --text-light: #eaeff5;           /* Ice Blue */
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Montserrat', sans-serif;
+  --font-display: 'Marcellus', Georgia, serif;   /* h1 / hero headlines on images */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Outfit', sans-serif;
 }
 
 body {
@@ -93,6 +94,12 @@ body.loaded #preloader {
 h1, h2, h3, h4, h5 {
   font-family: var(--font-heading);
   letter-spacing: 0.5px;
+}
+
+/* Marcellus has a single weight; override Bootstrap's .fw-bold to avoid faux bold */
+h1, h1.fw-bold {
+  font-family: var(--font-display);
+  font-weight: 400 !important;
 }
 
 a { text-decoration: none; transition: all 0.3s ease; }
