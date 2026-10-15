@@ -1,4 +1,27 @@
+# Manzil Homes - https://manzils.in
+# Search engines and AI assistants are welcome to read the public pages.
+
 User-agent: *
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# AI search & assistant crawlers (ChatGPT, Gemini, Claude, Perplexity, Copilot, Apple)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Google-Extended
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: CCBot
 Allow: /
 Disallow: /catalog.html
 Disallow: /catalogues/
