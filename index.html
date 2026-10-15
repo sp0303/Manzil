@@ -370,6 +370,13 @@
       <h2 class="loader-text">Manzil Homes - Constructions & Interiors </h2>
     </div>
   </div>
+  <script>
+    // Show the intro animation only on the first page view of a visit
+    try {
+      if (sessionStorage.getItem('mh-intro-seen')) document.getElementById('preloader').remove();
+      else sessionStorage.setItem('mh-intro-seen', '1');
+    } catch (e) {}
+  </script>
 
   <!-- NAVBAR -->
   <div id="navbar"></div>

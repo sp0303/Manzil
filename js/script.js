@@ -31,7 +31,7 @@ if (navbarHost) {
 window.addEventListener("scroll", syncNav, { passive: true });
 
 // ---------- Preloader (home page only) ----------
-// Hide shortly after the page has loaded, and never keep visitors waiting more than ~3s.
+// Shown once per visit (see index.html). Hide soon after load, never longer than 2s.
 (() => {
   const preloader = document.getElementById("preloader");
   if (!preloader) return;
@@ -47,9 +47,9 @@ window.addEventListener("scroll", syncNav, { passive: true });
     syncNav();
   };
 
-  if (document.readyState === "complete") setTimeout(hide, 600);
-  else window.addEventListener("load", () => setTimeout(hide, 600));
-  setTimeout(hide, 3000);
+  if (document.readyState === "complete") setTimeout(hide, 300);
+  else window.addEventListener("load", () => setTimeout(hide, 300));
+  setTimeout(hide, 2000);
 })();
 
 // ---------- Video resilience (pause on reduced motion) ----------
