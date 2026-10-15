@@ -1,0 +1,100 @@
+# Tells Bing (and other IndexNow search engines) about changed pages after each
+# deploy, so updates reach Bing / ChatGPT search / Copilot within hours.
+# Docs: https://www.indexnow.org/documentation
+name: IndexNow ping
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      all:
+        description: "Submit every page in sitemap.xml"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: true
+
+env:
+  SITE: https://manzils.in
+  KEY: 2837a087d12d12a8f0fcd15cde0ae99d   # public by design; must match /<KEY>.txt
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Work out which pages changed
+        id: urls
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+          SUBMIT_ALL: ${{ github.event_name == 'workflow_dispatch' && inputs.all }}
+        run: |
+          all_urls=$(grep -o '<loc>[^<]*</loc>' sitemap.xml | sed 's#</\?loc>##g')
+
+          if [ "$SUBMIT_ALL" = "true" ] || [ -z "$BEFORE" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
+            urls="$all_urls"
+          else
+            changed=$(git diff --name-only "$BEFORE" "$AFTER")
+            echo "Changed files:"; echo "$changed"
+            # Shared files (navbar, footer, styles, images, this workflow) affect every page
+            if echo "$changed" | grep -qE '^(components/|css/|js/|images/|pngs/|videos/|sitemap\.xml|\.github/workflows/indexnow\.yml)'; then
+              urls="$all_urls"
+            else
+              urls=""
+              for f in $(echo "$changed" | grep -E '\.html$'); do
+                [ "$f" = "index.html" ] && u="$SITE/" || u="$SITE/$f"
+                echo "$all_urls" | grep -qxF "$u" && urls="$urls"$'\n'"$u"
+              done
+            fi
+          fi
+
+          urls=$(echo "$urls" | sed '/^$/d' | sort -u)
+          echo "URLs to submit:"; echo "${urls:-<none>}"
+          { echo "list<<EOF"; echo "$urls"; echo "EOF"; } >> "$GITHUB_OUTPUT"
+
+      - name: Wait for GitHub Pages to publish this commit
+        if: steps.urls.outputs.list != ''
+        run: |
+          # Pages deploys separately; wait until the key file is reachable and give
+          # the new build time to go live before asking Bing to recrawl.
+          for i in $(seq 1 30); do
+            if [ "$(curl -fsS "$SITE/$KEY.txt" 2>/dev/null)" = "$KEY" ]; then
+              echo "Key file is live"; sleep 120; exit 0
+            fi
+            echo "Waiting for key file ($i)…"; sleep 20
+          done
+          echo "Key file not reachable at $SITE/$KEY.txt"; exit 1
+
+      - name: Submit to IndexNow
+        if: steps.urls.outputs.list != ''
+        env:
+          URLS: ${{ steps.urls.outputs.list }}
+        run: |
+          payload=$(python3 - <<'PY'
+          import json, os
+          urls = [u for u in os.environ["URLS"].splitlines() if u.strip()]
+          print(json.dumps({
+              "host": "manzils.in",
+              "key": os.environ["KEY"],
+              "keyLocation": f'{os.environ["SITE"]}/{os.environ["KEY"]}.txt',
+              "urlList": urls,
+          }))
+          PY
+          )
+          echo "$payload"
+          code=$(curl -sS -o response.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' --data "$payload")
+          echo "IndexNow responded HTTP $code"; cat response.txt || true
+          # 200 = accepted, 202 = accepted (key validation pending)
+          [ "$code" = "200" ] || [ "$code" = "202" ]
