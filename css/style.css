@@ -118,6 +118,7 @@ a:hover { color: var(--primary-color); }
 
 .navbar-brand img {
   height: 55px;
+  width: auto;
   transition: transform 0.3s ease;
 }
 .navbar-brand img:hover { transform: scale(1.05); }
@@ -380,7 +381,8 @@ footer .text-muted {
   color: #d1d1d1 !important;
 }
 
-footer h6 {
+footer h6,
+footer .h6 {
   color: #ffffff;
 }
 
