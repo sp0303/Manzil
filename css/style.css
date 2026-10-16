@@ -482,3 +482,53 @@ footer a:hover {
   .whatsapp-float { width: 52px; height: 52px; font-size: 27px; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
 }
 @media (prefers-reduced-motion: reduce) { .whatsapp-float { transition: none; } }
+
+/* ---------- Landing pages (services / cities / areas) ---------- */
+.lp-hero {
+  height: 62vh;
+  min-height: 400px;
+  background: var(--secondary-color) center / cover no-repeat;
+}
+.lp-hero .overlay { background: rgba(15, 19, 53, 0.6); }
+.lp-hero h1 { text-wrap: balance; }
+.lp-lead { max-width: 640px; margin-inline: auto; font-size: 1.1rem; }
+.lp-crumbs { padding-top: 18px; color: #6b6f80; }
+.lp-crumbs a { color: var(--primary-color); }
+.lp-prose p { line-height: 1.75; color: #444; }
+.lp-narrow { max-width: 820px; }
+.lp-card {
+  background: var(--text-light);
+  border-radius: 18px;
+  padding: 28px;
+  position: sticky;
+  top: 100px;
+}
+.lp-offers li { display: flex; gap: 10px; margin-bottom: 10px; }
+.lp-offers i { color: var(--primary-color); font-size: 1.1rem; line-height: 1.4; }
+.lp-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.lp-step { display: flex; gap: 14px; align-items: flex-start; padding: 18px; border: 1px solid rgba(15, 19, 53, 0.1); border-radius: 14px; }
+.lp-step-n {
+  flex: none; width: 34px; height: 34px; border-radius: 50%;
+  background: var(--secondary-color); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-weight: 600;
+}
+.lp-why { background: var(--text-light); border-radius: 14px; padding: 18px; }
+.lp-why i { font-size: 1.5rem; color: var(--primary-color); }
+.lp-related-list { display: flex; flex-direction: column; gap: 10px; }
+.lp-related {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 18px; border: 1px solid rgba(15, 19, 53, 0.12); border-radius: 12px;
+  color: var(--secondary-color); font-weight: 500;
+}
+.lp-related:hover { border-color: var(--primary-color); color: var(--primary-color); }
+.lp-cta { background: var(--secondary-color); color: var(--text-light); padding-block: 56px; }
+.lp-cta p { color: var(--accent-color); }
+.footer-seo h2 { color: #fff; }
+@media (max-width: 991.98px) { .lp-card { position: static; } }
+.areas-list li:has(a) { padding: 0; }
+.areas-list a { display: block; padding: 6px 14px; color: var(--primary-color); border-radius: 999px; }
+.areas-list a:hover { background: var(--primary-color); color: #fff; }

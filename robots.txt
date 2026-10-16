@@ -8,6 +8,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # OpenAI - ChatGPT browsing
 User-agent: ChatGPT-User
@@ -16,6 +17,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # OpenAI - model training
 User-agent: GPTBot
@@ -24,6 +26,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # Google - Gemini
 User-agent: Google-Extended
@@ -32,6 +35,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # Google Search
 User-agent: Googlebot
@@ -40,6 +44,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # Microsoft Bing / Copilot
 User-agent: Bingbot
@@ -48,6 +53,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # Anthropic - Claude
 User-agent: ClaudeBot
@@ -56,6 +62,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # Anthropic - Claude search
 User-agent: Claude-SearchBot
@@ -64,6 +71,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # Anthropic - Claude browsing
 User-agent: Claude-User
@@ -72,6 +80,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # Perplexity
 User-agent: PerplexityBot
@@ -80,6 +89,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # Perplexity browsing
 User-agent: Perplexity-User
@@ -88,6 +98,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # Apple
 User-agent: Applebot
@@ -96,6 +107,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # Apple AI
 User-agent: Applebot-Extended
@@ -104,6 +116,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # Common Crawl
 User-agent: CCBot
@@ -112,6 +125,7 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 # Everyone else
 User-agent: *
@@ -120,5 +134,6 @@ Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
+Disallow: /tools/
 
 Sitemap: https://manzils.in/sitemap.xml
