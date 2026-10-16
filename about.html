@@ -105,6 +105,7 @@
         ],
         "founder": {
           "@type": "Person",
+          "@id": "https://manzils.in/about.html#founder",
           "name": "Shaik Miza Mehroz",
           "jobTitle": "CEO, Civil Engineer & Interior Designer"
         },
@@ -350,6 +351,40 @@
     /* If you keep any .ratio containers elsewhere, make <img> inside bullet-proof too */
     .ratio img { width:100% !important; height:100% !important; object-fit:cover !important; display:block; }
   </style>
+  <!-- Founder structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://manzils.in/about.html#founder",
+    "name": "Shaik Miza Mehroz",
+    "jobTitle": "CEO, Civil Engineer & Interior Designer",
+    "description": "Founder and CEO of Manzil Homes, a women-led luxury interior design and construction company in Hyderabad. Civil Engineer and Interior Designer (B.Tech, M.Tech Structures) with 5+ years across design and interiors.",
+    "image": "https://manzils.in/images/miza-ceo.jpg",
+    "url": "https://manzils.in/about.html",
+    "worksFor": {
+      "@id": "https://manzils.in/#business"
+    },
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "B.Tech"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "degree",
+        "name": "M.Tech (Structures)"
+      }
+    ],
+    "knowsAbout": [
+      "Interior design",
+      "Structural engineering",
+      "Vastu Shastra",
+      "Luxury residential design"
+    ]
+  }
+  </script>
 </head>
 
 <body>

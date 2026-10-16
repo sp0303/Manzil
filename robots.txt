@@ -1,27 +1,120 @@
 # Manzil Homes - https://manzils.in
-# Search engines and AI assistants are welcome to read the public pages.
+# Search engines and AI assistants are welcome to read all public pages.
 
-User-agent: *
+# OpenAI - ChatGPT search
+User-agent: OAI-SearchBot
 Allow: /
 Disallow: /catalog.html
 Disallow: /catalogues/
 Disallow: /font-preview.html
 Disallow: /design/
 
-# AI search & assistant crawlers (ChatGPT, Gemini, Claude, Perplexity, Copilot, Apple)
-User-agent: GPTBot
-User-agent: OAI-SearchBot
+# OpenAI - ChatGPT browsing
 User-agent: ChatGPT-User
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# OpenAI - model training
+User-agent: GPTBot
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# Google - Gemini
 User-agent: Google-Extended
-User-agent: ClaudeBot
-User-agent: Claude-SearchBot
-User-agent: Claude-User
-User-agent: PerplexityBot
-User-agent: Perplexity-User
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# Google Search
+User-agent: Googlebot
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# Microsoft Bing / Copilot
 User-agent: Bingbot
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# Anthropic - Claude
+User-agent: ClaudeBot
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# Anthropic - Claude search
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# Anthropic - Claude browsing
+User-agent: Claude-User
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# Perplexity browsing
+User-agent: Perplexity-User
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# Apple
 User-agent: Applebot
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# Apple AI
 User-agent: Applebot-Extended
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# Common Crawl
 User-agent: CCBot
+Allow: /
+Disallow: /catalog.html
+Disallow: /catalogues/
+Disallow: /font-preview.html
+Disallow: /design/
+
+# Everyone else
+User-agent: *
 Allow: /
 Disallow: /catalog.html
 Disallow: /catalogues/
