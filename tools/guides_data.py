@@ -9,9 +9,9 @@ PUBLISHED = "2026-10-17"
 GUIDES = [
     dict(
         slug="guide-what-is-interior-design",
-        title="What Is Interior Design? A Simple Guide for Homeowners | Manzil Homes",
+        title="What Is Interior Design? A Simple Guide | Manzil Homes",
         h1="What Is Interior Design?",
-        desc="What interior design really means, how it differs from decoration, what an interior designer does and how Manzil Homes designs a home, step by step.",
+        desc="What interior design really means, how it differs from decoration, what an interior designer does and how Manzil Homes designs a home.",
         lead="Interior design explained in plain language, and how we approach it at Manzil Homes.",
         img="g-what-is", img_alt="Bright living room with white sofas and soft daylight",
         body=[
@@ -58,9 +58,9 @@ GUIDES = [
     ),
     dict(
         slug="guide-interior-design-process",
-        title="Interior Design Process Step by Step: From Idea to Handover | Manzil Homes",
+        title="Interior Design Process Step by Step | Manzil Homes",
         h1="The Interior Design Process, Step by Step",
-        desc="What happens at each stage of a home interior project, from the first meeting and 3D design to execution and handover, and what you should decide at each step.",
+        desc="Every stage of a home interior project, from the first meeting and 3D design to execution and handover, and what to decide at each step.",
         lead="What happens at every stage of a home interior project, and what you'll be asked to decide.",
         img="g-process", img_alt="Designer reviewing floor plans on a laptop and paper drawings",
         body=[
@@ -92,9 +92,9 @@ GUIDES = [
     ),
     dict(
         slug="guide-best-interior-designers-vizag",
-        title="Best Interior Designers in Vizag: 10 Things the Best Ones Do | Manzil Homes",
+        title="Best Interior Designers in Vizag: What to Look For",
         h1="Best Interior Designers in Vizag: What to Look For",
-        desc="How to recognise the best interior designers in Visakhapatnam: ten qualities that matter, from Vastu and 3D design to transparent BOQs, coastal materials and on-time delivery.",
+        desc="How to spot the best interior designers in Visakhapatnam: 10 qualities that matter, from Vastu and 3D design to transparent BOQs and on-time delivery.",
         lead="Ten qualities that separate the best interior designers in Visakhapatnam from the rest, and how Manzil Homes measures up.",
         img="g-best", img_alt="Elegant living room with a dark sectional sofa and gallery wall",
         body=[
@@ -140,9 +140,9 @@ GUIDES = [
     ),
     dict(
         slug="guide-choose-interior-designer-vizag",
-        title="How to Choose an Interior Designer in Visakhapatnam | Manzil Homes",
+        title="How to Choose an Interior Designer in Vizag | Manzil Homes",
         h1="How to Choose an Interior Designer in Visakhapatnam",
-        desc="A practical, step-by-step way to shortlist, compare and choose an interior designer in Vizag, including red flags to avoid.",
+        desc="A practical, step-by-step way to shortlist, compare and choose an interior designer in Visakhapatnam, including red flags to avoid.",
         lead="A practical way to shortlist, compare and choose the right designer for your Vizag home.",
         img="g-choose-designer", img_alt="Person reviewing a checklist on a clipboard before a project",
         body=[
@@ -177,9 +177,9 @@ GUIDES = [
     ),
     dict(
         slug="guide-interior-design-cost-factors",
-        title="What Affects Interior Design Cost in Vizag? 9 Key Factors | Manzil Homes",
+        title="What Affects Interior Design Cost? | Manzil Homes",
         h1="What Affects the Cost of Home Interiors?",
-        desc="Nine factors that decide how much home interiors cost in Visakhapatnam and Hyderabad, from scope and materials to hardware and timelines, and how to plan a realistic budget.",
+        desc="Nine factors that decide the cost of home interiors in Vizag and Hyderabad, from scope and materials to hardware, and how to plan your budget.",
         lead="Nine factors that decide your interior budget, and how to plan it without surprises.",
         img="g-cost", img_alt="Classic dining room with wooden table and chairs",
         body=[
@@ -221,9 +221,9 @@ GUIDES = [
     ),
     dict(
         slug="guide-vastu-tips-apartments",
-        title="Vastu Tips for Apartments and Homes: A Practical Guide | Manzil Homes",
+        title="Vastu Tips for Apartments | Manzil Homes",
         h1="Vastu Tips for Apartments",
-        desc="Practical Vastu tips for apartments and independent homes: entrance, kitchen, pooja room, bedrooms and colours, applied without compromising modern design.",
+        desc="Practical Vastu tips for apartments and homes: entrance, kitchen, pooja room, bedrooms and colours, applied without compromising modern design.",
         lead="Practical Vastu guidance you can apply in apartments, without giving up good modern design.",
         img="g-vastu", img_alt="Calm bedroom with soft white bedding and natural light",
         body=[
@@ -253,9 +253,9 @@ GUIDES = [
     ),
     dict(
         slug="guide-coastal-home-materials-vizag",
-        title="Best Materials for Coastal Homes in Vizag (Humidity & Salt Air) | Manzil Homes",
+        title="Best Materials for Coastal Homes in Vizag | Manzil Homes",
         h1="Best Interior Materials for Coastal Homes in Vizag",
-        desc="How salt air and humidity affect interiors in Visakhapatnam and which boards, hardware, finishes and paints last longest in coastal homes.",
+        desc="How salt air and humidity affect interiors in Visakhapatnam, and which boards, hardware, finishes and paints last longest in coastal homes.",
         lead="Salt air and humidity are hard on interiors. Here's how to choose materials that last in Vizag.",
         img="g-coastal", img_alt="Cosy sofa corner with cushions near a window",
         body=[
@@ -285,7 +285,7 @@ GUIDES = [
     ),
     dict(
         slug="guide-modular-kitchen-guide",
-        title="Modular Kitchen Guide: Layouts, Materials & Storage Tips | Manzil Homes",
+        title="Modular Kitchen Guide: Layouts & Materials | Manzil Homes",
         h1="The Complete Modular Kitchen Guide",
         desc="Choose the right modular kitchen layout, materials, finishes, hardware and storage for Indian cooking, with Vastu tips and mistakes to avoid.",
         lead="Layouts, materials, hardware and storage for a kitchen that handles real Indian cooking.",
@@ -337,9 +337,9 @@ GUIDES = [
     ),
     dict(
         slug="guide-apartment-interior-planning",
-        title="2BHK & 3BHK Apartment Interior Planning Guide | Manzil Homes",
+        title="2BHK & 3BHK Interior Planning Guide | Manzil Homes",
         h1="Planning Interiors for a 2BHK or 3BHK Apartment",
-        desc="Room-by-room planning tips for 2BHK and 3BHK apartment interiors: storage, lighting, furniture, work-from-home spaces and what to prioritise.",
+        desc="Room-by-room tips for 2BHK and 3BHK apartment interiors: storage, lighting, furniture, work-from-home spaces and what to prioritise first.",
         lead="Room-by-room planning tips to make a 2BHK or 3BHK feel bigger, calmer and better organised.",
         img="g-apartment", img_alt="Open apartment interior with a staircase and living area seen from above",
         body=[
@@ -371,9 +371,9 @@ GUIDES = [
     ),
     dict(
         slug="guide-design-build-vs-contractor",
-        title="Design-Build vs Separate Architect & Contractor: Which Is Better? | Manzil Homes",
+        title="Design-Build vs Separate Contractor | Manzil Homes",
         h1="Design-Build vs Separate Designer and Contractor",
-        desc="Compare the design-build approach with hiring a separate architect, interior designer and contractor for your home or villa, and which suits you.",
+        desc="Compare design-build with hiring a separate architect, interior designer and contractor for your home or villa, and see which suits you.",
         lead="One team or several? How design-build compares with hiring a separate designer and contractor.",
         img="g-design-build", img_alt="Minimal desk and chair in a white design studio",
         body=[
@@ -409,9 +409,9 @@ GUIDES = [
     ),
     dict(
         slug="guide-questions-to-ask-interior-designer",
-        title="15 Questions to Ask Before Hiring an Interior Designer | Manzil Homes",
+        title="15 Questions to Ask an Interior Designer | Manzil Homes",
         h1="15 Questions to Ask Before Hiring an Interior Designer",
-        desc="The questions to ask an interior designer before you sign: about design, BOQs, materials, timelines, payment and after-care.",
+        desc="The questions to ask an interior designer before you sign: design, BOQs, materials, timelines, payments and after-care. Compare answers, not quotes.",
         lead="Ask these before you sign, and compare the answers, not just the quotes.",
         img="g-questions", img_alt="Simple table with a vase of white flowers",
         body=[
@@ -454,9 +454,9 @@ GUIDES = [
     ),
     dict(
         slug="guide-home-renovation-checklist",
-        title="Home Renovation Checklist: Plan Your Renovation Step by Step | Manzil Homes",
+        title="Home Renovation Checklist | Manzil Homes",
         h1="Home Renovation Checklist",
-        desc="A step-by-step home renovation checklist covering structural checks, waterproofing, electrical, plumbing, design and living through a renovation.",
+        desc="A step-by-step home renovation checklist: structural checks, waterproofing, electrical, plumbing, design and living through a renovation.",
         lead="A step-by-step checklist to plan a renovation without nasty surprises.",
         img="g-renovation", img_alt="Empty room being renovated with fresh walls and floor",
         body=[
@@ -502,9 +502,9 @@ GUIDES = [
     ),
     dict(
         slug="guide-lighting-false-ceiling",
-        title="Home Lighting & False Ceiling Design Guide | Manzil Homes",
+        title="Home Lighting & False Ceiling Guide | Manzil Homes",
         h1="Lighting and False Ceiling Guide",
-        desc="How to plan home lighting and false ceilings: ambient, task and accent lighting, colour temperature, cove lights and common mistakes.",
+        desc="Plan home lighting and false ceilings: ambient, task and accent lighting, colour temperature, cove lights and the common mistakes to avoid.",
         lead="Good lighting changes how a home feels. Here's how to plan it with your false ceiling.",
         img="g-lighting", img_alt="Desk with a lamp, laptop and pencil holder in soft light",
         body=[
@@ -545,9 +545,9 @@ GUIDES = [
     ),
     dict(
         slug="guide-interior-design-timeline",
-        title="How Long Do Home Interiors Take? What Affects the Timeline | Manzil Homes",
+        title="How Long Do Home Interiors Take? | Manzil Homes",
         h1="How Long Do Home Interiors Take?",
-        desc="What decides how long a home interior project takes, from design approvals and material lead times to site work, and how to keep your project on schedule.",
+        desc="What decides how long a home interior project takes, from approvals and material lead times to site work, and how to stay on schedule.",
         lead="What decides how long your project takes, and how to keep it on schedule.",
         img="g-timeline", img_alt="Bright modern lobby lounge with chairs and large windows",
         body=[

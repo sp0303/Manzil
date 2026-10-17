@@ -455,8 +455,8 @@ def guides_index_html(biz):
     </div>
   </section>
 """
-    return shell(slug="guides", title="Interior Design & Construction Guides | Vizag & Hyderabad | Manzil Homes",
-                 desc="Practical guides on interior design and home construction: choosing a designer in Vizag, cost factors, Vastu tips, coastal materials, modular kitchens, lighting, timelines and more.",
+    return shell(slug="guides", title="Interior Design & Construction Guides | Manzil Homes",
+                 desc="Practical guides on home interiors and construction: choosing a designer in Vizag, cost factors, Vastu, coastal materials, kitchens and more.",
                  img="images/pages/g-faq.jpg", img_alt="Elegant dining room with chandelier", ld_graph=graph, body=body)
 
 
@@ -493,8 +493,8 @@ def faq_hub_html(biz):
     </div>
   </section>
 """
-    return shell(slug="faq", title="Interior Design & Construction FAQs | Manzil Homes, Visakhapatnam",
-                 desc="Answers to common questions about Manzil Homes: services, areas served, Vastu, 3D design, cost factors, free consultation, timelines and after-care.",
+    return shell(slug="faq", title="Interior Design FAQs | Manzil Homes, Visakhapatnam",
+                 desc="Answers to common questions about Manzil Homes: services, areas served, Vastu, 3D design, cost factors, free consultation and timelines.",
                  img="images/pages/g-questions.jpg", img_alt="Table with white flowers", ld_graph=graph, body=body)
 
 
