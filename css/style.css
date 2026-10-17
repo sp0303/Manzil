@@ -532,3 +532,26 @@ footer a:hover {
 .areas-list li:has(a) { padding: 0; }
 .areas-list a { display: block; padding: 6px 14px; color: var(--primary-color); border-radius: 999px; }
 .areas-list a:hover { background: var(--primary-color); color: #fff; }
+
+/* ---------- Guides ---------- */
+.lp-hero-sm { height: 52vh; min-height: 360px; }
+.guide-body { max-width: 760px; }
+.guide-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--secondary-color); margin: 2rem 0 0.75rem; }
+.guide-body p, .guide-body li { line-height: 1.8; color: #3d3f4a; font-size: 1.04rem; }
+.guide-body ul, .guide-body ol { padding-left: 1.3rem; margin-bottom: 1rem; }
+.guide-body li { margin-bottom: 0.35rem; }
+.guide-meta { margin-bottom: 1.5rem; }
+.guide-tip {
+  display: flex; gap: 14px; align-items: flex-start;
+  background: var(--text-light); border-left: 4px solid var(--primary-color);
+  border-radius: 12px; padding: 18px 20px; margin: 2rem 0;
+}
+.guide-tip i { color: var(--primary-color); font-size: 1.4rem; line-height: 1.4; }
+.guide-tip p { margin: 0; }
+.guide-card {
+  display: block; background: #fff; border: 1px solid rgba(15, 19, 53, 0.1);
+  border-radius: 16px; overflow: hidden; color: var(--secondary-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.guide-card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; max-width: 100%; }
+.guide-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15, 19, 53, 0.1); color: var(--secondary-color); }
