@@ -86,7 +86,7 @@ WHY = [
     ("bi-compass", "Vastu-aligned", "Planned with Vastu from the first sketch."),
     ("bi-receipt", "Transparent pricing", "Clear BOQs, tracked variations, no hidden costs."),
     ("bi-calendar-check", "On-time delivery", "Milestone-based schedules we commit to."),
-    ("bi-person-workspace", "Women-led &amp; engineered", "Led by a Civil Engineer (M.Tech Structures)."),
+    ("bi-person-workspace", "Women-led &amp; engineered", "Led by a structural engineer (M.Tech, Andhra University)."),
 ]
 
 
