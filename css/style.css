@@ -555,3 +555,5 @@ footer a:hover {
 }
 .guide-card img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; max-width: 100%; }
 .guide-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15, 19, 53, 0.1); color: var(--secondary-color); }
+.guide-figure { margin: 1.75rem 0; }
+.guide-figure img { width: 100%; max-width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }

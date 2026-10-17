@@ -27,6 +27,7 @@ TODAY = datetime.date.today().isoformat()
 CORE = [("/", "1.0", "weekly"), ("/services.html", "0.9", "monthly"), ("/projects.html", "0.8", "monthly"),
         ("/about.html", "0.8", "monthly"), ("/studio.html", "0.7", "monthly"), ("/contact.html", "0.8", "yearly")]
 BY_SLUG = {p["slug"]: p for p in PAGES}
+GUIDES = [g for g in GUIDES if "-ideas" in g["slug"]] + [g for g in GUIDES if "-ideas" not in g["slug"]]
 GUIDE_SLUG = {g["slug"]: g for g in GUIDES}
 ALL_SLUG = {**BY_SLUG, **GUIDE_SLUG}
 e = lambda s: html.escape(s, quote=True)
@@ -359,6 +360,9 @@ def render_blocks(blocks):
             out.append(f"        <p>{e(val)}</p>")
         elif kind in ("ul", "ol"):
             out.append(f"        <{kind}>\n" + "\n".join(f"          <li>{e(i)}</li>" for i in val) + f"\n        </{kind}>")
+        elif kind == "img":
+            src, alt = val
+            out.append(f'        <figure class="guide-figure"><img src="images/pages/{src}.jpg" alt="{e(alt)}" loading="lazy" class="img-fluid rounded-4" /></figure>')
         elif kind == "tip":
             out.append(f'        <aside class="guide-tip"><i class="bi bi-lightbulb" aria-hidden="true"></i><p>{e(val)}</p></aside>')
         else:
@@ -518,6 +522,9 @@ def main():
         for r in g["related"]:
             assert r in ALL_SLUG, f"{g['slug']}: unknown related page {r}"
         assert os.path.exists(os.path.join(ROOT, "images/pages", g["img"] + ".jpg")), g["img"]
+        for kind, val in g["body"]:
+            if kind == "img":
+                assert os.path.exists(os.path.join(ROOT, "images/pages", val[0] + ".jpg")), val[0]
         open(os.path.join(ROOT, g["slug"] + ".html"), "w", encoding="utf-8").write(guide_html(g, biz))
     open(os.path.join(ROOT, "guides.html"), "w", encoding="utf-8").write(guides_index_html(biz))
     open(os.path.join(ROOT, "faq.html"), "w", encoding="utf-8").write(faq_hub_html(biz))
