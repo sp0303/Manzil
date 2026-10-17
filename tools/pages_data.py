@@ -109,7 +109,7 @@ PAGES = [
             ("How do I track progress?", "Work follows milestone-based schedules, and you are kept updated at each stage of construction."),
             ("Can you also do the interiors?", "Yes. Many clients choose construction and interiors together so the house is ready to move into at handover."),
         ],
-        related=["villa-construction", "home-renovation", "interior-designers", "interior-designers-warangal"],
+        related=["villa-construction", "peb-structural-engineering", "home-renovation", "interior-designers-warangal"],
     ),
     dict(
         slug="modular-kitchen-designers", kind=SERVICES, nav="Modular Kitchens",
@@ -241,7 +241,7 @@ PAGES = [
             ("Do you handle small offices?", "Yes. We design offices of all sizes, from small studios to full floors."),
             ("Can the design reflect our brand?", "Yes. We use your brand colours, materials and graphics to make the space feel like yours."),
         ],
-        related=["cafe-showroom-interior-designers", "interior-designers-hyderabad", "interior-designers-visakhapatnam", "home-renovation"],
+        related=["cafe-showroom-interior-designers", "peb-structural-engineering", "interior-designers-hyderabad", "interior-designers-visakhapatnam"],
     ),
     dict(
         slug="cafe-showroom-interior-designers", kind=SERVICES, nav="Café & Showroom Interiors",
@@ -275,6 +275,42 @@ PAGES = [
             ("Do you handle execution too?", "Yes. We design and build, so one team takes the space from concept to opening day."),
         ],
         related=["office-interior-designers", "interior-designers", "interior-designers-jubilee-hills", "interior-designers-visakhapatnam"],
+    ),
+
+    dict(
+        slug="peb-structural-engineering", kind=SERVICES, nav="PEB & Structural Engineering",
+        service="Pre-Engineered Building (PEB) and Structural Engineering", area="Andhra Pradesh and Telangana",
+        title="PEB & Structural Engineering in Vizag | Manzil Homes",
+        desc="Pre-engineered building (PEB) and steel structure solutions, structural design and stability studies, led by an M.Tech structural engineer in Vizag.",
+        h1="PEB & Structural Engineering",
+        lead="Pre-engineered steel buildings and structural engineering, led by an M.Tech structural engineer from Andhra University.",
+        img="peb-structural", img_alt="Steel frame of a pre-engineered building under construction with hills in the background",
+        intro=[
+            "A pre-engineered building (PEB) is a steel structure whose columns, rafters, purlins and cladding are designed and fabricated off-site, then bolted together on site. Because most of the work happens in a factory, PEBs go up faster than conventional construction, use material efficiently and allow large, column-free spans.",
+            "Manzil Constructions & Interiors brings structural engineering into every project. Our founder, Shaik Miza Mehroz, holds an M.Tech in Structural Engineering from Andhra University, so stability, load paths and material efficiency are designed in from the start, whether the project is a PEB shed, a steel-framed building or a reinforced concrete home.",
+        ],
+        offer_title="Structural engineering & PEB services",
+        offers=[
+            "Pre-engineered building (PEB) and steel structure planning",
+            "Structural design of steel and RCC buildings",
+            "Load path, stability and material-efficiency studies",
+            "Structural checks for renovations and extra floors",
+            "Coordination of fabrication, erection and civil works",
+            "Interiors and fit-out after the structure is complete",
+        ],
+        local_title="Where PEB works well",
+        local=[
+            "PEBs suit warehouses, factories, workshops, showrooms, commercial halls, schools, sports facilities and agricultural sheds, as well as mezzanine floors inside existing buildings. Large clear spans, quick construction and easy future expansion make them popular for growing businesses.",
+            "In coastal Andhra Pradesh, including Visakhapatnam and Kakinada, steel structures need the right protective coatings and detailing to resist salt air and humidity. Cyclone-prone regions also need careful wind-load design. These are part of our structural approach from day one.",
+            "For homes and conventional buildings, the same engineering mindset applies: we check structure before moving walls, design for seismic and lateral stability, and plan provisions for future floors so they can be added safely later.",
+        ],
+        faqs=[
+            ("What is a pre-engineered building (PEB)?", "A steel building whose structural members are designed and fabricated in a factory to exact requirements, then bolted together on site, which makes construction faster and more efficient."),
+            ("What can PEBs be used for?", "Warehouses, factories, workshops, showrooms, commercial halls, schools, sports facilities, agricultural sheds and mezzanine floors."),
+            ("Who leads structural engineering at Manzil?", "Founder Shaik Miza Mehroz, a Civil Engineer with an M.Tech in Structural Engineering from Andhra University."),
+            ("Can you also do the interiors after the structure?", "Yes. As a design-build company we can handle the structure and then the interiors and fit-out."),
+        ],
+        related=["house-construction", "office-interior-designers", "villa-construction", "interior-designers-visakhapatnam"],
     ),
 
     # -------------------------------------------------------------------- cities

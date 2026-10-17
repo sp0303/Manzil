@@ -566,3 +566,10 @@ footer a:hover {
 }
 .expertise-card { background: #fff; border-radius: 16px; padding: 26px; box-shadow: 0 6px 18px rgba(15, 19, 53, 0.06); }
 .expertise-card i { font-size: 1.8rem; color: var(--primary-color); }
+.peb-band {
+  display: flex; align-items: center; gap: 18px;
+  padding: 22px 26px; border-radius: 18px; background: var(--text-light);
+  color: var(--secondary-color); border: 1px solid rgba(15, 19, 53, 0.08);
+}
+.peb-band .icon { width: 48px; height: 48px; flex: none; border-radius: 12px; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--primary-color); }
+.peb-band:hover { border-color: var(--primary-color); color: var(--secondary-color); }
