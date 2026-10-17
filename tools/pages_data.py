@@ -55,7 +55,7 @@ PAGES = [
         img="villa-construction", img_alt="Contemporary villa with large glass windows lit up at dusk",
         intro=[
             "Building a villa is usually the biggest project a family takes on. The usual way, with a separate architect, contractor and interior designer, often means three sets of drawings, three budgets and plenty of finger-pointing. Manzil Homes is a design-and-build company, so one team owns the whole journey from plot to housewarming.",
-            "Our founder, Shaik Miza Mehroz, is a Civil Engineer with an M.Tech in Structures. That engineering background means the luxury you see is backed by sound structure you don't see.",
+            "Our founder, Shaik Miza Mehroz, is a Civil Engineer with an M.Tech in Structural Engineering from Andhra University. That engineering background means the luxury you see is backed by sound structure you don't see.",
         ],
         offer_title="What villa construction includes",
         offers=[

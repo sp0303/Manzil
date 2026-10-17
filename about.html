@@ -140,7 +140,7 @@
           "@type": "Person",
           "@id": "https://manzils.in/about.html#founder",
           "name": "Shaik Miza Mehroz",
-          "jobTitle": "CEO, Civil Engineer & Interior Designer"
+          "jobTitle": "Founder & CEO, Civil Engineer & Interior Designer"
         },
         "knowsAbout": [
           "Interior design",
@@ -150,7 +150,11 @@
           "Vastu Shastra",
           "Home renovation",
           "Commercial interior design",
-          "3D visualization"
+          "3D visualization",
+          "Structural engineering",
+          "Pre-engineered buildings (PEB)",
+          "Structural analysis and stability",
+          "Custom furniture"
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -316,6 +320,7 @@
 
 
   <!-- Site CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="./css/style.css" />
 
   <!-- Favicon -->
@@ -391,8 +396,8 @@
     "@type": "Person",
     "@id": "https://manzils.in/about.html#founder",
     "name": "Shaik Miza Mehroz",
-    "jobTitle": "CEO, Civil Engineer & Interior Designer",
-    "description": "Founder and CEO of Manzil Homes, a women-led luxury interior design and construction company based in Visakhapatnam. Civil Engineer and Interior Designer (B.Tech, M.Tech Structures) with 5+ years across design and interiors.",
+    "jobTitle": "Founder & CEO, Manzil Constructions & Interiors",
+    "description": "Founder of Manzil Constructions & Interiors (Manzil Homes), Visakhapatnam. Civil Engineer (B.E., Andhra University) with an M.Tech in Structural Engineering from Andhra University, combining structural engineering with luxury interior design.",
     "image": "https://manzils.in/images/miza-ceo.jpg",
     "url": "https://manzils.in/about.html",
     "worksFor": {
@@ -402,20 +407,42 @@
       {
         "@type": "EducationalOccupationalCredential",
         "credentialCategory": "degree",
-        "name": "B.Tech"
+        "name": "Bachelor of Engineering in Civil Engineering",
+        "recognizedBy": {
+          "@type": "CollegeOrUniversity",
+          "name": "Andhra University"
+        }
       },
       {
         "@type": "EducationalOccupationalCredential",
         "credentialCategory": "degree",
-        "name": "M.Tech (Structures)"
+        "name": "Master of Technology in Structural Engineering",
+        "recognizedBy": {
+          "@type": "CollegeOrUniversity",
+          "name": "Andhra University"
+        }
       }
     ],
     "knowsAbout": [
-      "Interior design",
+      "Residential architecture and construction",
+      "Luxury interior design",
       "Structural engineering",
-      "Vastu Shastra",
-      "Luxury residential design"
-    ]
+      "Pre-engineered buildings (PEB)",
+      "Structural analysis and stability",
+      "Seismic response of buildings",
+      "Custom furniture and interior execution",
+      "Vastu Shastra"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Andhra University",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Visakhapatnam",
+        "addressRegion": "Andhra Pradesh",
+        "addressCountry": "IN"
+      }
+    }
   }
   </script>
 </head>
@@ -503,7 +530,7 @@
           <div class="ceo-frame" id="ceoFrame">
             <img
               src="images/miza-ceo.jpg"
-              alt="Shaik Miza Mehroz, CEO and interior designer at Manzil Homes, Hyderabad"
+              alt="Shaik Miza Mehroz, Founder of Manzil Constructions &amp; Interiors, Visakhapatnam"
               class="ceo-img"
               loading="lazy"
               onerror="this.style.display='none'; document.getElementById('ceoFrame').classList.add('ceo-fallback');"
@@ -513,8 +540,14 @@
         <div class="col-md-7">
           <span class="badge text-bg-dark rounded-pill mb-2">Women-Led</span>
           <h2 class="fw-bold mb-2">Shaik Miza Mehroz</h2>
-          <p class="text-muted mb-3">CEO • Civil Engineer & Interior Designer — B.Tech, M.Tech (Structures)</p>
-          <p>With 5+ years across design and interiors—including hands-on freelancing—Mehroz brings structural clarity and stylistic nuance. Her motto: <em>“Bringing modern ultra-luxury homes to AP & TG—world-class design with an Indian blend for Vastu compliance.”</em></p>
+          <p class="text-muted mb-1">Founder &amp; CEO, Manzil Constructions &amp; Interiors</p>
+          <p class="small text-muted mb-3">B.E. Civil Engineering &amp; M.Tech Structural Engineering, Andhra University</p>
+          <p class="founder-tagline">Engineering Precision. Architectural Excellence. Inspired Living.</p>
+          <p>Shaik Miza Mehroz is the Founder of Manzil Constructions &amp; Interiors, bringing together technical expertise, creative vision and a commitment to excellence in construction, structural engineering and interior design.</p>
+          <p>A proud graduate of Andhra University, with a Bachelor of Engineering in Civil Engineering and a Master of Technology in Structural Engineering, Miza combines a strong technical foundation with a passion for creating spaces that are aesthetically refined, structurally sound and thoughtfully designed.</p>
+          <p>Her approach is rooted in the belief that exceptional spaces begin with a strong foundation and are elevated through intelligent planning, meticulous detailing and purposeful design. From construction and structural solutions to sophisticated residential and commercial interiors, she strives to deliver projects that reflect quality, functionality, durability and timeless elegance.</p>
+          <p>Miza is driven by a vision to build more than structures: to create meaningful spaces that embody trust, individuality and lasting value. With an emphasis on professional integrity, client satisfaction and attention to every detail, she aims to transform each client&rsquo;s vision into a well-executed reality.</p>
+          <blockquote class="founder-quote">Every structure deserves a strong foundation, every space deserves thoughtful design, and every client deserves excellence.</blockquote>
           <div class="row g-3 mt-3">
             <div class="col-sm-6">
               <div class="d-flex">
@@ -543,6 +576,54 @@
           </div>
           <div class="mt-3">
             <a href="projects.html" class="btn btn-light rounded-pill px-4">See Our Work</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS OF EXPERTISE -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title mb-2">Areas of Expertise</h2>
+        <div class="gold-underline"></div>
+        <p class="text-muted mt-3 lead-max">Where engineering expertise meets creativity: the five disciplines behind every Manzil project.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="expertise-card h-100">
+            <i class="bi bi-house-door" aria-hidden="true"></i>
+            <h3 class="h5 fw-bold mt-3 mb-2">Residential Architecture &amp; Construction</h3>
+            <p class="small text-muted mb-0">Creating thoughtfully planned homes that balance architectural character, functional layouts, structural integrity and everyday comfort.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="expertise-card h-100">
+            <i class="bi bi-gem" aria-hidden="true"></i>
+            <h3 class="h5 fw-bold mt-3 mb-2">Luxury Interiors &amp; Bespoke Spaces</h3>
+            <p class="small text-muted mb-0">Transforming interiors into refined environments through considered materials, elegant finishes, custom furniture, layered lighting and practical space planning.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="expertise-card h-100">
+            <i class="bi bi-building-gear" aria-hidden="true"></i>
+            <h3 class="h5 fw-bold mt-3 mb-2">Structural Engineering &amp; PEB Projects</h3>
+            <p class="small text-muted mb-0">Efficient structural systems and construction solutions, including pre-engineered buildings, with an emphasis on stability, load paths, material efficiency and practical execution.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="expertise-card h-100">
+            <i class="bi bi-diagram-3" aria-hidden="true"></i>
+            <h3 class="h5 fw-bold mt-3 mb-2">Structural Analysis &amp; Stability Studies</h3>
+            <p class="small text-muted mb-0">Applying postgraduate structural engineering knowledge to building behaviour, lateral stability, seismic response and structural control systems.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="expertise-card h-100">
+            <i class="bi bi-rulers" aria-hidden="true"></i>
+            <h3 class="h5 fw-bold mt-3 mb-2">Custom Furniture &amp; Interior Execution</h3>
+            <p class="small text-muted mb-0">Tailored interior solutions that bring together craftsmanship, carefully selected materials, functional storage and a cohesive design language.</p>
           </div>
         </div>
       </div>

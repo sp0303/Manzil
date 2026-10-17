@@ -557,3 +557,12 @@ footer a:hover {
 .guide-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15, 19, 53, 0.1); color: var(--secondary-color); }
 .guide-figure { margin: 1.75rem 0; }
 .guide-figure img { width: 100%; max-width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+
+/* ---------- About: founder + expertise ---------- */
+.founder-tagline { font-family: var(--font-display); font-size: 1.25rem; color: var(--primary-color); margin-bottom: 1rem; }
+.founder-quote {
+  border-left: 4px solid var(--primary-color); background: var(--text-light);
+  padding: 14px 18px; border-radius: 10px; font-style: italic; color: var(--secondary-color); margin: 1.25rem 0;
+}
+.expertise-card { background: #fff; border-radius: 16px; padding: 26px; box-shadow: 0 6px 18px rgba(15, 19, 53, 0.06); }
+.expertise-card i { font-size: 1.8rem; color: var(--primary-color); }

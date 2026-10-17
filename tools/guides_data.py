@@ -125,7 +125,7 @@ GUIDES = [
                 "Vastu-aligned planning in every project",
                 "Photo-realistic 3D design before execution",
                 "Transparent BOQs with tracked variations and no hidden costs",
-                "Led by Civil Engineer and Interior Designer Shaik Miza Mehroz (M.Tech Structures)",
+                "Led by Civil Engineer and Interior Designer Shaik Miza Mehroz (M.Tech Structural Engineering, Andhra University)",
                 "Design and construction by one team, with milestone-based, on-time delivery",
                 "Free first consultation",
             ]),
@@ -807,7 +807,7 @@ FAQ_HUB = [
     ("About Manzil Homes", [
         ("What is Manzil Homes?", "Manzil Homes (Manzil Constructions & Interiors) is a women-led luxury interior design and construction company based in Visakhapatnam, serving Vizag, Hyderabad and all of Andhra Pradesh and Telangana."),
         ("Where is your office?", "10/326/1, Vishalakshi Nagar, Visakhapatnam, Andhra Pradesh 530040. We are open all days, 9am to 7pm."),
-        ("Who leads Manzil Homes?", "Founder and CEO Shaik Miza Mehroz, a Civil Engineer and Interior Designer (B.Tech, M.Tech Structures) with over five years in design and interiors."),
+        ("Who leads Manzil Homes?", "Founder and CEO Shaik Miza Mehroz, a Civil Engineer and Interior Designer (B.E. Civil Engineering and M.Tech Structural Engineering, Andhra University) with over five years in design and interiors."),
         ("Which areas do you serve?", "Visakhapatnam (including MVP Colony, Madhurawada, Rushikonda and Seethammadhara), Hyderabad, Vijayawada, Guntur, Amaravati, Rajahmundry, Kakinada, Tirupati, Warangal and other parts of Andhra Pradesh and Telangana."),
         ("How do I contact you?", "Call or WhatsApp +91 94920 54954, email manzil.homes24@gmail.com, or use the contact form on our website."),
     ]),
