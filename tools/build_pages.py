@@ -26,6 +26,7 @@ from build_gallery import IMAGE_NS, image_tags  # noqa: E402
 SITE = "https://manzils.in"
 TODAY = datetime.date.today().isoformat()
 CORE = [("/", "1.0", "weekly"), ("/services.html", "0.9", "monthly"), ("/projects.html", "0.8", "monthly"),
+        ("/gallery.html", "0.8", "monthly"),
         ("/about.html", "0.8", "monthly"), ("/studio.html", "0.7", "monthly"), ("/contact.html", "0.8", "yearly")]
 BY_SLUG = {p["slug"]: p for p in PAGES}
 GUIDES = [g for g in GUIDES if "-ideas" in g["slug"]] + [g for g in GUIDES if "-ideas" not in g["slug"]]

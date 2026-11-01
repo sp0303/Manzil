@@ -1,4 +1,4 @@
-"""Design Gallery data for projects.html (used by tools/build_gallery.py and tools/build_pages.py).
+"""Design Gallery data for gallery.html (used by tools/build_gallery.py and tools/build_pages.py).
 
 Each entry: (file in images/gallery/, category, description).
 The description is used for the <img> alt text, the lightbox caption, the
