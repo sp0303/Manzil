@@ -5,7 +5,7 @@ Usage (from the repository root):
     python3 tools/build_pages.py
 
 It writes one <slug>.html per page at the site root, and refreshes:
-  - sitemap.xml                    (core pages + every landing page)
+  - sitemap.xml                    (core pages + every landing page, with gallery images)
   - components/footer.html         (block between SEO-LINKS markers)
   - llms.txt                       (block between SEO-PAGES markers)
 Images are expected at images/pages/<img>.jpg.
@@ -21,6 +21,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 from pages_data import PAGES, SERVICES, CITY, LOCALITY  # noqa: E402
 from guides_data import GUIDES, FAQ_HUB, PUBLISHED  # noqa: E402
+from build_gallery import IMAGE_NS, image_tags  # noqa: E402
 
 SITE = "https://manzils.in"
 TODAY = datetime.date.today().isoformat()
@@ -530,14 +531,14 @@ def main():
     open(os.path.join(ROOT, "faq.html"), "w", encoding="utf-8").write(faq_hub_html(biz))
 
     # sitemap
-    rows = [f"  <url><loc>{SITE}{u}</loc><lastmod>{TODAY}</lastmod><changefreq>{f}</changefreq><priority>{pr}</priority></url>"
-            for u, pr, f in CORE]
+    rows = [f"  <url><loc>{SITE}{u}</loc><lastmod>{TODAY}</lastmod><changefreq>{f}</changefreq><priority>{pr}</priority>"
+            f"{image_tags(u)}</url>" for u, pr, f in CORE]
     rows += [f"  <url><loc>{SITE}/{p['slug']}.html</loc><lastmod>{TODAY}</lastmod><changefreq>monthly</changefreq>"
              f"<priority>{'0.8' if p['kind'] != LOCALITY else '0.7'}</priority></url>" for p in PAGES]
     rows += [f"  <url><loc>{SITE}/{u}.html</loc><lastmod>{TODAY}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>"
              for u in ["guides", "faq"] + [g["slug"] for g in GUIDES]]
     open(os.path.join(ROOT, "sitemap.xml"), "w").write(
-        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" ' + IMAGE_NS + '>\n'
         + "\n".join(rows) + "\n</urlset>\n")
 
     # footer link block
