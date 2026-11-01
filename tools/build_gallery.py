@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Build the Design Gallery on projects.html from tools/gallery_data.py.
+"""Build the Design Gallery page (gallery.html) from tools/gallery_data.py.
 
 Usage (from the repository root):
     python3 tools/build_gallery.py
 
-It rewrites the block between the DESIGN-GALLERY markers in projects.html
+It rewrites the block between the DESIGN-GALLERY markers in gallery.html
 (grid, alt text and ImageGallery structured data) and adds <image:image>
 entries to sitemap.xml. tools/build_pages.py also uses image_tags() so the
 image sitemap survives a full rebuild.
@@ -31,7 +31,7 @@ def alt(desc):
 
 def page_images(page):
     """(absolute url, caption) for every image listed in the sitemap for a page."""
-    if page == "/projects.html":
+    if page == "/gallery.html":
         return [(f"{SITE}/images/gallery/{f}", alt(d)) for f, _, d in GALLERY]
     return [(f"{SITE}/{p}", c) for p, c in EXTRA_IMAGES.get(page, [])]
 
@@ -62,7 +62,7 @@ def gallery_html():
            '<section class="design-gallery py-5" id="design-gallery">',
            '  <div class="container">',
            '    <div class="text-center">',
-           '      <h2 class="fw-bold mb-3">Design Gallery</h2>',
+           '      <h2 class="fw-bold mb-3">Browse Our Interior Designs</h2>',
            '      <p class="text-muted mb-4 mx-auto" style="max-width:720px">',
            '        Explore our interior design concepts for bedrooms, living rooms, modular kitchens and wardrobes.',
            '        Tap any image to view it full size.',
@@ -108,11 +108,11 @@ def structured_data():
     return {
         "@context": "https://schema.org",
         "@type": "ImageGallery",
-        "@id": f"{SITE}/projects.html#design-gallery",
+        "@id": f"{SITE}/gallery.html#design-gallery",
         "name": "Manzil Homes Interior Design Gallery",
         "description": "Interior design concepts for bedrooms, living rooms, modular kitchens and wardrobes "
                        "by Manzil Homes, Visakhapatnam and Hyderabad.",
-        "url": f"{SITE}/projects.html#design-gallery",
+        "url": f"{SITE}/gallery.html#design-gallery",
         "publisher": {"@id": f"{SITE}/#business"},
         "associatedMedia": [{
             "@type": "ImageObject",
@@ -134,7 +134,8 @@ def patch_sitemap():
     if IMAGE_NS not in s:
         s = s.replace('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
                       f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" {IMAGE_NS}>')
-    for page in ["/projects.html"] + list(EXTRA_IMAGES):
+    s = re.sub(r"(<url><loc>[^<]*</loc>.*?</priority>)(?:<image:image>.*?</image:image>)+(</url>)", r"\1\2", s)
+    for page in ["/gallery.html"] + list(EXTRA_IMAGES):
         loc = f"<loc>{SITE}{page}</loc>"
         s = re.sub(r"(<url>" + re.escape(loc) + r".*?</priority>)(?:<image:image>.*?</image:image>)*(</url>)",
                    lambda m: m.group(1) + image_tags(page) + m.group(2), s)
@@ -142,7 +143,7 @@ def patch_sitemap():
 
 
 def main():
-    p = os.path.join(ROOT, "projects.html")
+    p = os.path.join(ROOT, "gallery.html")
     s = open(p, encoding="utf-8").read()
     i, j = s.index(START), s.index(END) + len(END)
     open(p, "w", encoding="utf-8").write(s[:i] + gallery_html() + s[j:])

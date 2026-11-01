@@ -646,3 +646,5 @@ footer a:hover {
   .lb-prev { left: 8px; }
   .lb-next { right: 8px; }
 }
+.gallery-hero { height: 60vh; min-height: 380px; background: center / cover no-repeat url('../images/gallery/living-05.jpg'); }
+.gallery-hero .overlay { background: rgba(15, 19, 53, 0.55); }
